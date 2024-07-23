@@ -20,14 +20,16 @@ $(document).ready(function(){
                     let imgsrc = arr[i].imgsrc;
                     let eventTime = arr[i].eventTime;
     
-                    list += '<li>';
-                    list += '<img src="' + imgsrc + '" alt="">';
-                    list += '<dl>';
-                    list += '<dt>' + title + '</dt>';
-                    list += '<dd>' + txt + '</dd>';
-                    list += '<dd>기간/시간 : ' + eventTime + '</dd>';
-                    list += '</dl>';
-                    list += '<a href="#">자세히</a></li>';
+                    list += `<li>
+                                <img src="${imgsrc}" alt="">
+                                <dl>
+                                    <dt>${title}</dt>
+                                    <dd>${txt}</dd>
+                                    <dd>기간/시간 : ${eventTime}</dd>
+                                </dl>
+                                <a href="#">자세히</a>
+                            </li>
+                    `
                 };
                 list += '</ul>';
                 $('.eventList div').html(list);

@@ -12,11 +12,6 @@ $(document).ready(function(){
             $('#headerArea').css('background','none');
         }
 
-        // if(scroll>700){
-        //     $('#headerArea').css('background','rgb(126, 105, 86)');
-        // }else{
-        //     $('#headerArea').css('background','none');
-        // }
     });
 
     let move_top = document.getElementById('move_top');

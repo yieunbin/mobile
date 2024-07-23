@@ -11,16 +11,12 @@ $(document).ready(function(){
         for (let charCode = 97; charCode <= 105; charCode++) {
             const letter1 = String.fromCharCode(charCode);
             //console.log(letter);
-            
-            poolbox += '<li>';
-            poolbox += '<span>'
-            poolbox += letter1;
-            poolbox += '</span>';
-            poolbox += '<p>';
-            poolbox += poollist1[charCode - 97];
-            poolbox += '</p>';
-            poolbox += '</li>';
-            
+
+            poolbox += `<li>
+                            <span>${letter1}</span>
+                            <p>${poollist1[charCode - 97]}</p>
+                        </li>
+            `
         }
         poolbox += '</ul></li>';
         poolbox += '<li><ul>';
@@ -28,14 +24,11 @@ $(document).ready(function(){
         for (let charCode = 106; charCode <= 108; charCode++){
             const letter2 = String.fromCharCode(charCode);
             
-            poolbox += '<li>';
-            poolbox += '<span>'
-            poolbox += letter2;
-            poolbox += '</span>';
-            poolbox += '<p>';
-            poolbox += poollist2[charCode - 106];
-            poolbox += '</p>';
-            poolbox += '</li>';
+            poolbox += `<li>
+                            <span>${letter2}</span>
+                            <p>${poollist2[charCode - 106]}</p>
+                        </li>
+            `
         }
         poolbox += '</ul></li>';
         poolbox += '</ul>';
@@ -141,11 +134,11 @@ $(document).ready(function(){
 
         $('.back').show();
 
-        let bqbox='<div><p>'+bqmenu.name+'</p>';
+        let bqbox=`<div><p>${bqmenu.name}</p>`;
         bqbox+='<ul>';
         for(let i=1; i<=6; i++){
             if (bqmenu['menu'+i] !== undefined) {
-                bqbox+='<li>'+bqmenu['menu'+i]+'</li>';
+                bqbox+=`<li>${bqmenu['menu'+i]}</li>`;
             }
         }
         bqbox+='</ul></div>';
